@@ -36,7 +36,7 @@ def ensure_vader_ready():
         nltk.data.find("sentiment/vader_lexicon.zip")
     except LookupError:
         nltk.download("vader_lexicon")
-    from nltk.sentiment import SentimentIntensityAnalyzer  # import after download
+    from nltk.sentiment import SentimentIntensityAnalyzer  
     return SentimentIntensityAnalyzer()
 
 @st.cache_resource(show_spinner=False)
@@ -131,7 +131,7 @@ with st.sidebar:
     run_btn = st.button("Scrape & Analyze", type="primary", use_container_width=True)
 
 
-# Main flow
+# Main flow....................
 
 if run_btn:
     if not sel_feeds:
